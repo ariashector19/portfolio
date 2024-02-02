@@ -37,6 +37,10 @@ nav ul {
   margin-right: 20px; /* Ajusta el espacio entre elementos según sea necesario */
 }
 
+/* header.scss */
+
+// ... (Otras declaraciones de estilos)
+
 nav {
   li {
     margin-right: 20px;
@@ -53,8 +57,11 @@ nav {
     color: $color-blanco;
     transition: color 0.3s ease-in-out;
 
-    &:hover,
-    &.selected {
+    &.accent {
+      color: $color-azul-claro;
+    }
+
+    &:hover {
       color: $color-azul-claro;
     }
   }

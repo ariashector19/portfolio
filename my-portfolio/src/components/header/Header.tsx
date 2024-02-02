@@ -8,27 +8,39 @@ export const Header: React.FC = () => {
 
   return (
     <motion.header initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-      <header>
-        <div className="header-text">Mi Potfolio</div>
+      <header className="header">
+        <div className="header-text">Mi Portfolio</div>
         <nav>
           <ul className="horizontal-list">
             <li className={pathname.includes("/aboutme") ? "selected" : ""}>
-              <Link to="/aboutme" className="accent">
+              <Link
+                to="/aboutme"
+                className={pathname.includes("/aboutme") ? "accent" : ""}
+              >
                 About Me
               </Link>
             </li>
             <li className={pathname.includes("/skills") ? "selected" : ""}>
-              <Link to="/skills" className="accent">
+              <Link
+                to="/skills"
+                className={pathname.includes("/skills") ? "accent" : ""}
+              >
                 Skills
               </Link>
             </li>
             <li className={pathname.includes("/projects") ? "selected" : ""}>
-              <Link to="/projects" className="accent">
+              <Link
+                to="/projects"
+                className={pathname.includes("/projects") ? "accent" : ""}
+              >
                 Projects
               </Link>
             </li>
             <li className={pathname.includes("/contact") ? "selected" : ""}>
-              <Link to="/contact" className="accent">
+              <Link
+                to="/contact"
+                className={pathname.includes("/contact") ? "accent" : ""}
+              >
                 Contact
               </Link>
             </li>
