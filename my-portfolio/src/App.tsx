@@ -1,25 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.scss";
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
+import { ABOUT_ME, SKILLS, PROJECTS, CONTACT } from "./utils/Props";
+import { Header } from "./components/header/Header";
+import { AboutMe } from "./components/aboutme/AboutMe";
+import { Skills } from "./components/skills/Skills";
+import { Projects } from "./components/projects/Projects";
+import { Contact } from "./components/contact/Contact";
+
+const ROUTES = [
+  {
+    path: ABOUT_ME,
+    element: <AboutMe />,
+  },
+  {
+    path: SKILLS,
+    element: <Skills />,
+  },
+  {
+    path: PROJECTS,
+    element: <Projects />,
+  },
+  {
+    path: CONTACT,
+    element: <Contact />,
+  },
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <>
+        <Header />
+        <Routes>
+          {ROUTES.map((ROUTE, i) => (
+            <Route key={i} path={ROUTE.path} element={ROUTE.element} />
+          ))}
+        </Routes>
+      </>
+    </Router>
   );
 }
 
