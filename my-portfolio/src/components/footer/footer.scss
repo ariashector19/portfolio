@@ -1,0 +1,32 @@
+/* footer.scss */
+/* Variables de colores */
+$color-gris: #495057;
+$color-blanco: #ffffff;
+$color-azul-claro: #3498db;
+
+/* Estilos para el Footer */
+.footer {
+  background-color: $color-gris;
+  padding: 20px 0;
+  color: $color-blanco;
+  text-align: center;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      margin: 0;
+    }
+
+    a {
+      color: $color-blanco;
+      text-decoration: underline;
+
+      &:hover {
+        color: $color-azul-claro;
+      }
+    }
+  }
+}

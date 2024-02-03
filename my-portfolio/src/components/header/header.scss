@@ -1,0 +1,82 @@
+/* Variables de colores */
+$color-gris: #495057;
+$color-azul-oscuro: #2c3e50;
+$color-blanco: #ffffff;
+$color-azul-claro: #3498db;
+
+/* Estilos para el encabezado */
+header {
+  background-color: $color-gris;
+  padding: 10px;
+}
+header-text-container {
+  margin-right: 20px;
+}
+
+.header-text {
+  font-size: larger;
+  color: var(--color-blanco);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.header-text:hover {
+  color: var(--color-azul-claro);
+  text-shadow: 0 0 5px rgba(52, 152, 219, 0.8);
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.header-text {
+  font-size: larger;
+  color: $color-blanco;
+}
+
+/* Estilos para el enlace acentuado (Azul claro) */
+
+.horizontal-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.horizontal-list li {
+  margin-right: 20px; /* Ajusta el espacio entre elementos según sea necesario */
+}
+
+/* header.scss */
+
+// ... (Otras declaraciones de estilos)
+
+nav {
+  li {
+    margin-right: 20px;
+    transition: color 0.3s ease-in-out;
+
+    &:hover,
+    &.selected {
+      color: $color-azul-claro;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $color-blanco;
+    transition: color 0.3s ease-in-out;
+
+    &.accent {
+      color: $color-azul-claro;
+    }
+
+    &:hover {
+      color: $color-azul-claro;
+    }
+  }
+}

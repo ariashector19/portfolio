@@ -1,0 +1,12 @@
+// translation.json (es)
+{
+  "content": {
+    "welcome": "¡Bienvenido a mi portafolio!"
+  },
+  "navigation": {
+    "aboutMe": "Sobre Mí",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  }
+}
