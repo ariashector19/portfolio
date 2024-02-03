@@ -1,3 +1,4 @@
+// Header.tsx
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -9,11 +10,7 @@ export const Header: React.FC = () => {
   return (
     <motion.header initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
       <header className="header">
-        <div className="header-text-container">
-          <Link to="/" className="header-text">
-            Mi Portfolio
-          </Link>
-        </div>
+        <div className="header-text">Héctor</div>
         <nav>
           <ul className="horizontal-list">
             <li className={pathname.includes("/aboutme") ? "selected" : ""}>
