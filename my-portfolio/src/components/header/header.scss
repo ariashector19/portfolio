@@ -25,8 +25,19 @@ nav ul {
 
 .header-text {
   font-size: larger;
-  color: $color-blanco;
   margin-left: 20px; /* Ajusta el espacio entre el texto y el lado izquierdo */
+
+  a {
+    text-decoration: none;
+    color: $color-blanco;
+    transition: color 0.5s ease-in-out, text-shadow 0.5s ease-in-out;
+
+    &:hover,
+    &.selected {
+      color: $color-azul-claro;
+      text-shadow: 0 0 5px $color-azul-claro; /* Añade un sutil brillo al pasar el ratón */
+    }
+  }
 }
 
 /* Estilos para el enlace acentuado (Azul claro) */
