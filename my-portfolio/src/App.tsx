@@ -7,6 +7,7 @@ import { AboutMe } from "./components/aboutme/AboutMe";
 import { Skills } from "./components/skills/Skills";
 import { Projects } from "./components/projects/Projects";
 import { Contact } from "./components/contact/Contact";
+import { Home } from "./components/home/Home";
 
 const ROUTES = [
   {
@@ -24,6 +25,10 @@ const ROUTES = [
   {
     path: CONTACT,
     element: <Contact />,
+  },
+  {
+    path: "/",
+    element: <Home />,
   },
 ];
 

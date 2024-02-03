@@ -1,0 +1,13 @@
+/* home.scss */
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--color-gris);
+}

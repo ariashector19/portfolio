@@ -9,7 +9,11 @@ export const Header: React.FC = () => {
   return (
     <motion.header initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
       <header className="header">
-        <div className="header-text">Mi Portfolio</div>
+        <div className="header-text-container">
+          <Link to="/" className="header-text">
+            Mi Portfolio
+          </Link>
+        </div>
         <nav>
           <ul className="horizontal-list">
             <li className={pathname.includes("/aboutme") ? "selected" : ""}>

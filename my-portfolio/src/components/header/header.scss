@@ -9,7 +9,21 @@ header {
   background-color: $color-gris;
   padding: 10px;
 }
+header-text-container {
+  margin-right: 20px;
+}
 
+.header-text {
+  font-size: larger;
+  color: var(--color-blanco);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.header-text:hover {
+  color: var(--color-azul-claro);
+  text-shadow: 0 0 5px rgba(52, 152, 219, 0.8);
+}
 nav ul {
   list-style: none;
   display: flex;
