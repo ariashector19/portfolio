@@ -8,4 +8,18 @@
 body {
   background-color: var(--color-blanco);
   color: var(--color-gris);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+#root {
+  flex: 1; /* Hace que el contenedor principal (root) crezca para llenar el espacio restante */
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
