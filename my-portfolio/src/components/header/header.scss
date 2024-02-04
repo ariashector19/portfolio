@@ -8,7 +8,7 @@ $color-azul-claro: #3498db;
 
 /* Estilos para el encabezado */
 header {
-  background-color: $color-gris;
+  background-color: $color-blanco;
   width: 100%;
   padding: 10px;
   display: flex;
@@ -29,7 +29,8 @@ nav ul {
 
   a {
     text-decoration: none;
-    color: $color-blanco;
+    color: $color-gris;
+    font-weight: bold;
     transition: color 0.5s ease-in-out, text-shadow 0.5s ease-in-out;
 
     &:hover,
@@ -73,7 +74,8 @@ nav {
 
     a {
       text-decoration: none;
-      color: $color-blanco;
+      font-weight: bold;
+      color: $color-gris;
       transition: color 0.5s ease-in-out;
 
       &:hover,
