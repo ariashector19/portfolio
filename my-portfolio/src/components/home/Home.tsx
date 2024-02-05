@@ -2,7 +2,26 @@
 import React from "react";
 import { Motion } from "../motion/Motion";
 import styled from "styled-components";
+import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa"; // Importa el ícono de GitHub
 import "./home.scss";
+
+const socialIcons = [
+  {
+    name: "Instagram",
+    icon: FaInstagram,
+    link: "https://www.instagram.com/Bedshaped1",
+  },
+  {
+    name: "LinkedIn",
+    icon: FaLinkedin,
+    link: "https://www.linkedin.com/in/héctor-arias-a810/",
+  },
+  {
+    name: "GitHub",
+    icon: FaGithub,
+    link: "https://github.com/ariashector19",
+  },
+];
 
 const HomeContainer = styled.div`
   display: grid;
@@ -36,6 +55,22 @@ export const Home: React.FC = () => {
       <HomeContainer className="home-container">
         <TextContainer>
           <h1>Bienvenido a mi Portafolio como Desarrollador Web</h1>
+          <div className="social-icons-container">
+            <ul>
+              {socialIcons.map((social, index) => (
+                <li key={index}>
+                  <a
+                    href={social.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <social.icon className="social-icon" />
+                    <span>{social.name}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </TextContainer>
         <ImageContainer>
           <img src="https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortRound&accessoriesType=Blank&hairColor=Black&facialHairType=BeardLight&facialHairColor=Black&clotheType=Hoodie&clotheColor=Red&eyeType=Default&eyebrowType=RaisedExcited&mouthType=Twinkle&skinColor=Light" />
