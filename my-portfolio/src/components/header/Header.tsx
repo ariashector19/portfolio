@@ -11,7 +11,7 @@ export const Header: React.FC = () => {
     <motion.header initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
       <header className="header">
         <div className="header-text">
-          <Link to="/home">Héctor</Link>
+          <Link to="/">Héctor</Link>
         </div>
         <nav>
           <ul className="horizontal-list">

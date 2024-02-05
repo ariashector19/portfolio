@@ -4,6 +4,11 @@
   --color-blanco: #ffffff;
   --color-azul-claro: #3498db;
 }
+html {
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+}
 
 body {
   background-image: url("./img/fondo4.jpg"); /* Reemplaza 'ruta_de_tu_imagen.jpg' con la ruta de tu imagen de fondo */
@@ -13,8 +18,8 @@ body {
   color: var(--color-gris);
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   margin: 0;
+  height: 100%;
 }
 
 // #root {
