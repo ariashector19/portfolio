@@ -1,0 +1,20 @@
+// contact.scss
+.contact {
+    padding: 20px;
+  
+    .contact-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      .form-container {
+        width: 50%; // El formulario ocupa el 50% del ancho de la pantalla
+        margin-right: 20px; // Espacio entre el formulario y el avatar
+      }
+  
+      .avatar-container {
+        width: 50%; // El avatar ocupa el 50% del ancho de la pantalla
+      }
+    }
+  }
+  
