@@ -30,7 +30,7 @@ const ROUTES = [
     element: <Contact />,
   },
   {
-    path: "/",
+    path: "*",
     element: <Home />,
   },
 ];
