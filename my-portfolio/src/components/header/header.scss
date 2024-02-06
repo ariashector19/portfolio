@@ -1,3 +1,5 @@
+/* header.scss */
+
 /* Variables de colores */
 $color-gris: #495057;
 $color-azul-oscuro: #2c3e50;
@@ -6,35 +8,37 @@ $color-azul-claro: #3498db;
 
 /* Estilos para el encabezado */
 header {
-  background-color: $color-gris;
+  background-color: $color-blanco;
+  width: 100%;
   padding: 10px;
-}
-header-text-container {
-  margin-right: 20px;
-}
-
-.header-text {
-  font-size: larger;
-  color: var(--color-blanco);
-  text-decoration: none;
-  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.header-text:hover {
-  color: var(--color-azul-claro);
-  text-shadow: 0 0 5px rgba(52, 152, 219, 0.8);
-}
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: space-between;
-  padding: 0;
+  padding: 30px;
   margin: 0;
 }
 
 .header-text {
   font-size: larger;
-  color: $color-blanco;
+  margin-left: 20px; /* Ajusta el espacio entre el texto y el lado izquierdo */
+
+  a {
+    text-decoration: none;
+    color: $color-gris;
+    font-weight: bold;
+    transition: color 0.5s ease-in-out, text-shadow 0.5s ease-in-out;
+
+    &:hover,
+    &.selected {
+      color: $color-azul-claro;
+      text-shadow: 0 0 5px $color-azul-claro; /* Añade un sutil brillo al pasar el ratón */
+    }
+  }
 }
 
 /* Estilos para el enlace acentuado (Azul claro) */
@@ -42,41 +46,42 @@ nav ul {
 .horizontal-list {
   list-style: none;
   display: flex;
-  justify-content: space-between;
   padding: 0;
   margin: 0;
 }
 
 .horizontal-list li {
-  margin-right: 20px; /* Ajusta el espacio entre elementos según sea necesario */
+  margin-right: 40px; /* Ajusta el espacio entre elementos según sea necesario */
 }
 
-/* header.scss */
-
-// ... (Otras declaraciones de estilos)
-
 nav {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
   li {
-    margin-right: 20px;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.5s ease-in-out, border-bottom 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column; /* Hace que el texto y el subrayado estén en columnas */
 
     &:hover,
     &.selected {
       color: $color-azul-claro;
-    }
-  }
-
-  a {
-    text-decoration: none;
-    color: $color-blanco;
-    transition: color 0.3s ease-in-out;
-
-    &.accent {
-      color: $color-azul-claro;
+      border-bottom: 2px solid $color-azul-claro;
+      margin-bottom: -2px; /* Ajusta la posición del subrayado hacia abajo */
     }
 
-    &:hover {
-      color: $color-azul-claro;
+    a {
+      text-decoration: none;
+      font-weight: bold;
+      color: $color-gris;
+      transition: color 0.5s ease-in-out;
+
+      &:hover,
+      &.accent {
+        color: $color-azul-claro;
+      }
     }
   }
 }
