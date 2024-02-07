@@ -1,0 +1,22 @@
+.avatar-container {
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 978px) {
+  .avatar-img {
+    transform: scale(
+      0.7
+    ); // Escala el avatar al 50% de su tamaño original cuando el ancho de la pantalla sea igual o mayor a 768px
+  }
+}
+
+@media (max-width: 500px) {
+  .avatar-img {
+    transform: scale(
+      0.4
+    ); // Escala el avatar al 30% de su tamaño original cuando el ancho de la pantalla sea igual o mayor a 1024px
+  }
+}
+
+/* Agrega más media queries según sea necesario para ajustar el tamaño del avatar para diferentes tamaños de pantalla */

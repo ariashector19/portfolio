@@ -1,20 +1,49 @@
 // contact.scss
+/* Variables de colores */
+$color-gris: #495057;
+$color-azul-oscuro: #2c3e50;
+$color-blanco: #ffffff;
+$color-azul-claro: #3498db;
 .contact {
-    padding: 20px;
-  
-    .contact-container {
+  padding: 20px;
+
+  .contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .form-container {
+      margin-left: 20px;
+      width: 50%;
+      margin-right: 20px;
       display: flex;
-      justify-content: center;
-      align-items: center;
-  
-      .form-container {
-        width: 50%; // El formulario ocupa el 50% del ancho de la pantalla
-        margin-right: 20px; // Espacio entre el formulario y el avatar
-      }
-  
-      .avatar-container {
-        width: 50%; // El avatar ocupa el 50% del ancho de la pantalla
-      }
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .avatar-container {
+      width: 50%; // El avatar ocupa el 50% del ancho de la pantalla
     }
   }
-  
+
+  .custom-form {
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .custom-button {
+    background-color: #f0f5fa;
+    color: var($color-gris);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    margin-top: 20px;
+  }
+
+  .custom-button:hover {
+    color: #3498db;
+    transition: color 0.5s ease;
+  }
+}

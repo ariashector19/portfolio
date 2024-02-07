@@ -4,6 +4,7 @@ import { Motion } from "../motion/Motion";
 import styled from "styled-components";
 import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa"; // Importa el ícono de GitHub
 import "./home.scss";
+import { Avatar } from "../avatar/Avatar";
 
 const socialIcons = [
   {
@@ -73,7 +74,7 @@ export const Home: React.FC = () => {
           </div>
         </TextContainer>
         <ImageContainer>
-          <img src="https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortRound&accessoriesType=Blank&hairColor=Black&facialHairType=BeardLight&facialHairColor=Black&clotheType=Hoodie&clotheColor=Red&eyeType=Default&eyebrowType=RaisedExcited&mouthType=Twinkle&skinColor=Light" />
+          <Avatar />
         </ImageContainer>
       </HomeContainer>
     </Motion>
