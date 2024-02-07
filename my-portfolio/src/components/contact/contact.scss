@@ -14,7 +14,7 @@ $color-azul-claro: #3498db;
 
     .form-container {
       margin-left: 20px;
-      width: 50%;
+      width: 70%;
       margin-right: 20px;
       display: flex;
       flex-direction: column;
@@ -22,13 +22,17 @@ $color-azul-claro: #3498db;
     }
 
     .avatar-container {
-      width: 50%; // El avatar ocupa el 50% del ancho de la pantalla
+      width: 30%; // El avatar ocupa el 50% del ancho de la pantalla
     }
   }
 
   .custom-form {
     border-radius: 10px;
     padding: 20px;
+
+    .form-group {
+      width: 100%;
+    }
   }
 
   .custom-button {
@@ -40,10 +44,25 @@ $color-azul-claro: #3498db;
     cursor: pointer;
     transition: background-color 0.5s ease;
     margin-top: 20px;
+    width: 100%;
   }
 
   .custom-button:hover {
     color: #3498db;
     transition: color 0.5s ease;
   }
+}
+
+.rs-form-control,
+.rs-form-control-warpper,
+.rs-input {
+  width: 80%;
+  height: 25px;
+  border: none;
+  border-radius: 5px;
+}
+
+.rs-form-control:focus,
+.rs-form-control-warpper:focus {
+  border-color: #3498db;
 }
