@@ -43,7 +43,7 @@ export const Contact: React.FC = () => {
 
     // Validar el formato del correo electrónico
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (formData.email && emailRegex.test(formData.email)) {
+    if (formData.email && !emailRegex.test(formData.email)) {
       errors.email = "Introduce un correo electrónico válido";
       console.log(emailRegex.test(formData.email));
       isValid = false;
@@ -61,8 +61,21 @@ export const Contact: React.FC = () => {
   // Función para manejar el envío del formulario
   const handleSubmit = async () => {
     try {
-      if (!validateForm()) {
-        return; // Si el formulario no es válido, no se envía
+      if (validateForm()) {
+        const response = await fetch("http://localhost:5100/send-email", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData), // Enviar los datos del formulario como JSON
+        });
+
+        if (response.ok) {
+          window.alert("¡Mensaje enviado correctamente!");
+          // Aquí puedes mostrar una notificación o realizar alguna otra acción si el envío es exitoso
+        } else {
+          throw new Error("Error al enviar el mensaje");
+        }
       }
 
       // Lógica para enviar el formulario...
@@ -76,7 +89,7 @@ export const Contact: React.FC = () => {
       <section id="contact" className="contact">
         <div className="contact-container">
           <div className="form-container">
-            <h2>Contacto</h2>
+            <h1>Contacto</h1>
             <p>¡Hablemos! Estoy disponible para oportunidades emocionantes.</p>
             <Form onSubmit={handleSubmit} className="custom-form">
               <Form.Group className="form-group">

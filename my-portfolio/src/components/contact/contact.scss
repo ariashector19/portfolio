@@ -26,29 +26,34 @@ $color-azul-claro: #3498db;
     }
   }
 
+  h1,
+  p {
+    margin-left: 2%;
+  }
+
   .custom-form {
     border-radius: 10px;
     padding: 20px;
 
     .form-group {
       width: 100%;
+      margin-bottom: 20px;
     }
   }
 
   .custom-button {
-    background-color: #f0f5fa;
-    color: var($color-gris);
+    background-color: #3498db;
+    color: #495057;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.5s ease;
     margin-top: 20px;
-    width: 100%;
   }
 
   .custom-button:hover {
-    color: #3498db;
+    color: #ffffff;
     transition: color 0.5s ease;
   }
 }
@@ -56,10 +61,11 @@ $color-azul-claro: #3498db;
 .rs-form-control,
 .rs-form-control-warpper,
 .rs-input {
-  width: 80%;
+  width: 70%;
   height: 25px;
   border: none;
   border-radius: 5px;
+  margin: 3px 0px;
 }
 
 .rs-form-control:focus,
